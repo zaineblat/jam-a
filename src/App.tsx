@@ -3,6 +3,7 @@ import { Button } from "./components/ui/button";
 import { Card, CardContent } from "./components/ui/card";
 import { Badge } from "./components/ui/badge";
 import { Input } from "./components/ui/input";
+import { WaitlistForm } from "./components/WaitlistForm";
 import { motion } from "motion/react";
 import {
   Heart,
@@ -57,12 +58,14 @@ export default function App() {
               >
                 About
               </a>
-              <Button
-                className="text-white rounded-full px-6 py-2"
-                style={{ backgroundColor: "#F88379" }}
-              >
-                Join the Waitlist
-              </Button>
+              <WaitlistForm>
+                <Button
+                  className="text-white rounded-full px-6 py-2"
+                  style={{ backgroundColor: "#F88379" }}
+                >
+                  Join the Waitlist
+                </Button>
+              </WaitlistForm>
             </div>
           </div>
         </div>
@@ -87,14 +90,16 @@ export default function App() {
                 budget, and manages every detail.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 sm:justify-center lg:justify-start">
-                <Button
-                  size="lg"
-                  className="text-white rounded-full px-8 py-4 text-lg shadow-lg hover:shadow-xl transition-all"
-                  style={{ backgroundColor: "#F88379" }}
-                >
-                  Join the Waitlist{" "}
-                  <ArrowRight className="ml-2 h-5 w-5" />
-                </Button>
+                <WaitlistForm>
+                  <Button
+                    size="lg"
+                    className="text-white rounded-full px-8 py-4 text-lg shadow-lg hover:shadow-xl transition-all"
+                    style={{ backgroundColor: "#F88379" }}
+                  >
+                    Join the Waitlist{" "}
+                    <ArrowRight className="ml-2 h-5 w-5" />
+                  </Button>
+                </WaitlistForm>
                 <Button
                   variant="outline"
                   size="lg"
@@ -401,7 +406,7 @@ export default function App() {
           >
             <BookOpen className="h-10 w-10 text-white" />
           </div>
-          <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-6 font-[Abel]">
+          <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-6">
             Join Our Blog
           </h2>
           <p className="text-lg text-gray-600 mb-8 max-w-2xl mx-auto">
@@ -445,7 +450,6 @@ export default function App() {
           <div className="text-center mb-[40px] mt-[0px] mr-[0px] ml-[0px]">
             <motion.h2
              className="text-3xl lg:text-4xl font-bold text-gray-900 mb-4"
-              style={{ fontFamily: "serif" }}
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6 }}
@@ -540,7 +544,6 @@ export default function App() {
                 <CardContent className="p-0">
                   <h3
                     className="text-2xl lg:text-3xl font-bold text-gray-900 mb-6"
-                    style={{ fontFamily: "serif" }}
                   >
                     Why Jam'a Exists?
                   </h3>
@@ -571,7 +574,6 @@ export default function App() {
                 <CardContent className="p-0">
                   <h3
                     className="text-2xl lg:text-3xl font-bold text-gray-900 mb-6"
-                    style={{ fontFamily: "serif" }}
                   >
                     What We Do?
                   </h3>
@@ -605,14 +607,16 @@ export default function App() {
             part of the event planning revolution.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button
-              size="lg"
-              className="text-white rounded-full px-8 py-4 text-lg shadow-lg hover:shadow-xl transition-all"
-              style={{ backgroundColor: "#F88379" }}
-            >
-              Join the Waitlist{" "}
-              <ArrowRight className="ml-2 h-5 w-5" />
-            </Button>
+            <WaitlistForm>
+              <Button
+                size="lg"
+                className="text-white rounded-full px-8 py-4 text-lg shadow-lg hover:shadow-xl transition-all"
+                style={{ backgroundColor: "#F88379" }}
+              >
+                Join the Waitlist{" "}
+                <ArrowRight className="ml-2 h-5 w-5" />
+              </Button>
+            </WaitlistForm>
             <Button
               variant="outline"
               size="lg"
